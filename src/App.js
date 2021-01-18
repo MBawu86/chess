@@ -33,14 +33,7 @@ function App() {
         setFen(game.current.fen())
     }
 
-    const checkMate = ({sourceSquare, targetSquare})
-
-    const resetGame= () => {
-      game.current.clear();
-      game.current.reset();
-      setFen('start')
-    }
-
+    
   return (
     <>
     {
@@ -50,7 +43,7 @@ function App() {
         game.current && game.current.game_over() ? 
         <div style = {{textAlign: 'center'}}>
           <h1> GAME OVER </h1>
-          <button onclick = {resetGame}>New Game</button>         
+          <button>New Game</button>         
         </div>:
         <span></span>
       }
